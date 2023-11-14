@@ -1,0 +1,27 @@
+<div class=" min-h-screen bg-gray-900 " >
+<ul class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
+    <li *ngFor="let news of newsList" class=" p-2 border rounded-2xl border-gray-700 m-3 relative flex flex-col sm:flex-row xl:flex-col items-start bg-gray-800">
+        <div class="order-1 sm:ml-6 xl:ml-0">
+            <h3 class="mb-1 text-white font-semibold dark:text-slate-200">
+                <span class="mb-1 block text-sm leading-6 text-blue-700">{{
+                    news.titulo
+                    }}</span>
+                {{ news.descripcion }}
+            </h3>
+            
+            <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-green-700 text-white hover:bg-green-800 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-6"
+                href="">Aprended mas<span class="sr-only">
+                    </span><svg
+                    class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400 dark:text-slate-500 dark:group-hover:text-slate-400"
+                    width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M0 0L3 3L0 6"></path>
+                </svg></a>
+        </div>
+        
+        <youtube-player videoId="{{ news.url }}" suggestedQuality="highres" [height]="240" [width]="426"
+        [startSeconds]="4" [endSeconds]="300">
+    </youtube-player>
+    </li>
+</ul>
+</div>

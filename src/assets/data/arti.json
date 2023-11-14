@@ -1,0 +1,22 @@
+[
+    {
+        "imagen":"assets/imagenes/dia_mundial_reciclaje.jpg",
+        "titulo":"dia mundial del reciclaje",
+        "descripcion":"el 17 se mayo se celebrara el dia mundial del reciclaje"
+    },
+    {
+        "imagen":"assets/imagenes/limpiar-playas.jpg",
+        "titulo":"hombre limpia playa",
+        "descripcion":"hombrel limpia playa solo en 3 hrs"
+    },
+    {
+        "imagen":"assets/imagenes/mitos_reciclaje.jpg",
+        "titulo":"cinco mitos sobre el reciclaje que hay que desterrar",
+        "descripcion":"El conocimiento sobre el reciclaje es de gran importancia en la sociedad y evitar la información falsa es importante para contribuir al desarrollo sostenible. Para ello, Ecoembes ha publicado una serie de mitos para desterrar:"
+    },
+    {
+        "imagen":"assets/imagenes/latas_aluminio.jpg",
+        "titulo":"reciclaje: crece el mercado de latas de aluminio y permite un gran ahorro de energía",
+        "descripcion":"El proceso de fabricación de latas nuevas a partir del reciclaje es notable, ya que se trata de un metal que puede recuperarse casi en su totalidad"
+    }
+]

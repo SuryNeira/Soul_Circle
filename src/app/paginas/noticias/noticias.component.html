@@ -1,0 +1,23 @@
+<div class=" min-h-screen   flex flex-col items-center justify-center  bg-gray-900">
+<a *ngFor="let news of newsList" class=" bg-gray-800 p-8 max-w-lg border my-4  border-gray-700 rounded-2xl hover:shadow-xl hover:shadow-gray-600 flex flex-col items-center"
+   >
+    <img [src]="news.imagen" class="shadow rounded-lg overflow-hidden border" >
+    <div class="mt-8">
+        <h4 class=" text-white font-bold text-xl">{{news.titulo}}</h4>
+        <p class="mt-2 text-white ">{{news.descripcion}}
+          
+        </p>
+
+        <div class="mt-5 ">
+            <button type="button" routerLink="" class="inline-flex items-center rounded-md border border-transparent bg-green-700 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900">Acceder a la noticia</button>
+        </div>
+    </div>
+</a>
+</div>
+
+
+
+
+
+
+                 

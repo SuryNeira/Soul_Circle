@@ -1,0 +1,20 @@
+<div class=" bg-gray-900 min-h-screen  flex flex-col items-center justify-center  ">
+    
+    <div class="max-w-lg mx-auto  bg-gray-800 rounded-lg shadow-md p-5   ">
+        <img class="w-32 h-32 rounded-full mx-auto" src="assets/imagenes/perfil.jpg "alt="Profile picture" />
+        <h2 class="text-center text-2xl font-semibold mt-3 text-white">Nombre: {{ userProfileData.name }}</h2>
+        <p class="text-center text-white mt-1">Correo: {{ userProfileData.email}}</p>
+        
+        <div class="mt-5">
+            <h3 class="text-xl font-semibold text-white">Bio</h3>
+            <p class="text-white mt-2">
+                {{ userProfileData.name }} is a software engineer with over 10 years of experience in developing
+                web and mobile applications. He is skilled in JavaScript, React, and
+                Node.js.
+            </p>
+        </div>
+    </div>
+    <div>
+        <button type="button" (click)="borrar()" class="w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">borrar perfil</button>
+    </div>
+</div>

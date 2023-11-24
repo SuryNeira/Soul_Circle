@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { UsersService } from './users.service';
 import { ProfileService } from './perfil.service';
+import { EditarPerfilComponent } from './paginas/editar-perfil/editar-perfil.component';
 
 const routes: Routes = [
   {
@@ -53,10 +54,14 @@ const routes: Routes = [
     path: 'noticias',
     component: NoticiasComponent,
   },
+  {
+    path: 'editar',
+    component: EditarPerfilComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, MenuComponent, RegistroComponent, IngresoComponent, PerfilComponent, TutorialesComponent, BuscadorComponent,NoticiasComponent],
+  declarations: [AppComponent, FooterComponent, MenuComponent, RegistroComponent, IngresoComponent, PerfilComponent, TutorialesComponent, BuscadorComponent,NoticiasComponent, EditarPerfilComponent],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes),ReactiveFormsModule,CommonModule,HttpClientModule,YouTubePlayerModule],
   providers: [UsersService],
   bootstrap: [AppComponent],

@@ -12,11 +12,12 @@ import { Router } from '@angular/router';
 
 export class EditarPerfilComponent implements OnInit {
   loginForm: FormGroup;
+  userProfileData: any;
 
   constructor(
     private fb: FormBuilder,
     private user: UsersService,
-    private prof: ProfileService,
+    private perf: ProfileService,
     private router: Router
   ) {
     this.loginForm = fb.group({
@@ -27,18 +28,22 @@ export class EditarPerfilComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
-
+  ngOnInit() {
+  }
+  
   Confirma() {
-    this.user.getUserMail(this.loginForm.value.email).subscribe((data: any) => {
-      if (data[0].mail == this.loginForm.value.email) {
-        if (data[0].contraseña == this.loginForm.value.password)
-        {
-          console.log("Datos coinciden");
-          this.prof.setPerfil(data[0]);
-          this.router.navigate(["/perfil"]);
-        }   
-      }
-    });
+    this.userProfileData = localStorage.getItem('local');
+    this.userProfileData=JSON.parse(this.userProfileData);
+    let userData = {
+      usuario:this.loginForm.value.nombre,
+      contraseña: this.loginForm.value.password,
+      descripcion:this.loginForm.value.descipcion,
+      genero:this.loginForm.value.genero,
+    };
+    console.log(this.userProfileData[0].id);
+    console.log(userData);
+    this.user.updateUser(this.userProfileData[0].id,userData);
+
+    //localStorage.setItem('local', JSON.stringify(userData));
   }
 }

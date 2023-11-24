@@ -34,10 +34,10 @@ export class RegistroComponent {
       mail: this.registerForm.value.email,
       contraseña: this.registerForm.value.password,
       usuario:"nombre",
-      fecha_nacimiento:"",
-      genero:""
+      descripcion:"",
+      genero:"",
+      rol:"1"
     };
-    localStorage.setItem('local', JSON.stringify(userData));
     this.user.saveUserData(userData).subscribe((result)=>{
       console.log(result);
     })

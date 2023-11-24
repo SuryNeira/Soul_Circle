@@ -32,7 +32,8 @@ export class IngresoComponent implements OnInit {
         if (data[0].contraseña == this.loginForm.value.password)
         {
           console.log("Datos coinciden");
-          this.prof.setPerfil(data[0]);
+          this.prof.setPerfil(data);
+          localStorage.setItem('local', JSON.stringify(data));
           this.router.navigate(["/perfil"]);
         }   
       }

@@ -20,4 +20,8 @@ export class UsersService {
   deleteUser(id: number) {
     return this.http.delete(`${this.url}/${id}`);
   }
+  updateUser(id: number,data: any) {
+    console.log(data);
+    return this.http.put(`http://localhost:4000/api/usuarios/${id}`,JSON.stringify(data))
+  }
 }

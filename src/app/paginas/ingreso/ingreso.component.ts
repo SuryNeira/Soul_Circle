@@ -28,8 +28,6 @@ export class IngresoComponent implements OnInit {
 
   Confirma() {
     this.user.getUserMail(this.loginForm.value.email).subscribe((data: any) => {
-      console.log(data[0]);
-      console.log(this.loginForm.value.password);
       if (data[0].mail == this.loginForm.value.email) {
         if (data[0].contraseña == this.loginForm.value.password)
         {

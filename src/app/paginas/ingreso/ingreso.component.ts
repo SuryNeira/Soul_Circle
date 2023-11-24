@@ -26,9 +26,9 @@ export class IngresoComponent implements OnInit {
   Confirma() {   
     this.user.getUser().subscribe((data: any) => {
       for (let i = 0; data.length; i++) {
-          if(data[i].email==this.loginForm.value.email)
+          if(data[i].email==this.loginForm.value.mail)
           {
-            if(data[i].password==this.loginForm.value.password)
+            if(data[i].password==this.loginForm.value.contraseña)
             console.log('Datos coinciden');
             this.prof.setPerfil(data[i]);
             this.router.navigate(['/perfil']);

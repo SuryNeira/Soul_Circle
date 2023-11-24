@@ -21,7 +21,7 @@ export class InicioComponent implements OnInit {
   Confirma() {   
     console.log("data[i]");
     this.user.getUser().subscribe((data: any) => {
-      for (let i = 0; i<1; i++) {
+      for (let i = 0; i<2; i++) {
          console.log(data[i]);
       } 
     });

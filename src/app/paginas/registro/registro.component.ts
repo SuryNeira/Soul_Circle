@@ -28,11 +28,14 @@ export class RegistroComponent {
     )
   }
   // se puede ocupar Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")])
+  //usuario,mail,contraseña,fecha_nacimiento,genero
   SaveData(){
     let userData = {
-      email: this.registerForm.value.email,
-      password: this.registerForm.value.password,
-      name:"nombre"
+      mail: this.registerForm.value.email,
+      contraseña: this.registerForm.value.password,
+      usuario:"nombre",
+      fecha_nacimiento:"",
+      genero:""
     };
     localStorage.setItem('local', JSON.stringify(userData));
     this.user.saveUserData(userData).subscribe((result)=>{

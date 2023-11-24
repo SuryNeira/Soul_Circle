@@ -21,7 +21,7 @@ export class PerfilComponent implements OnInit {
     private router: Router
   ) {
     this.adminForm = fb.group({
-      password: ["", [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 

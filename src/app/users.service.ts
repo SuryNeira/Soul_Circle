@@ -11,8 +11,10 @@ export class UsersService {
   getUser(){
     return this.http.get(this.url);
   }
+  getUserMail(mail:any){
+    return this.http.get(`http://localhost:4000/api/usuarios/${mail}`)
+  }
   saveUserData(data: any){
-    console.log(data);
     return this.http.post(this.url, data);
   }
   deleteUser(id: number) {

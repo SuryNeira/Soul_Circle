@@ -5,35 +5,39 @@ import { ProfileService } from 'src/app/perfil.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-ingreso',
-  templateUrl: './ingreso.component.html',
-  styleUrls: ['./ingreso.component.css'],
+  selector: "app-ingreso",
+  templateUrl: "./ingreso.component.html",
+  styleUrls: ["./ingreso.component.css"],
 })
 export class IngresoComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private user: UsersService, private prof:ProfileService,private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private user: UsersService,
+    private prof: ProfileService,
+    private router: Router
+  ) {
     this.loginForm = fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-    })
-
-  }
-  
-  ngOnInit() {
+      email: ["", [Validators.required, Validators.email]],
+      password: ["", [Validators.required, Validators.minLength(6)]],
+    });
   }
 
-  Confirma() {   
-    this.user.getUser().subscribe((data: any) => {
-      for (let i = 0; data.length; i++) {
-          if(data[i].email==this.loginForm.value.mail)
-          {
-            if(data[i].password==this.loginForm.value.contraseña)
-            console.log('Datos coinciden');
-            this.prof.setPerfil(data[i]);
-            this.router.navigate(['/perfil']);
-          }
-      } 
+  ngOnInit() {}
+
+  Confirma() {
+    this.user.getUserMail(this.loginForm.value.email).subscribe((data: any) => {
+      console.log(data[0]);
+      console.log(this.loginForm.value.password);
+      if (data[0].mail == this.loginForm.value.email) {
+        if (data[0].contraseña == this.loginForm.value.password)
+        {
+          console.log("Datos coinciden");
+          this.prof.setPerfil(data[0]);
+          this.router.navigate(["/perfil"]);
+        }   
+      }
     });
   }
 }

@@ -26,8 +26,8 @@
                                 <! los comprobarores del validador>
                                     <div *ngIf="loginForm.controls['nombre'].hasError('required')" class="text-red-600">
                                         Nombre obligaririo</div>
-                                    <div *ngIf="loginForm.controls['nombre'].hasError('maxLength(20)')" class="text-red-600">
-                                        Nombre valido necesario</div>
+                                    <div *ngIf="loginForm.controls['nombre'].hasError('maxlength')" class="text-red-600">
+                                        Nombre muy largo</div>
 
                                     <! dentro dee class invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500
                                         para los bordes rojos valid:[&:not(:placeholder-shown)]:border-green-500 para
@@ -46,8 +46,8 @@
                                 <! los comprobarores del validador>
                                     <div *ngIf="loginForm.controls['genero'].hasError('required')" class="text-red-600">
                                         genero obligaririo</div>
-                                    <div *ngIf="loginForm.controls['genero'].hasError('maxLength(10)')" class="text-red-600">
-                                        genero valido necesario</div>
+                                    <div *ngIf="loginForm.controls['genero'].hasError('maxlength')" class="text-red-600">
+                                        genero muy largo</div>
 
                                     <! dentro dee class invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500
                                         para los bordes rojos valid:[&:not(:placeholder-shown)]:border-green-500 para
@@ -66,8 +66,8 @@
                                 <! los comprobarores del validador>
                                     <div *ngIf="loginForm.controls['descipcion'].hasError('required')" class="text-red-600">
                                         descripcion obligariria</div>
-                                    <div *ngIf="loginForm.controls['descipcion'].hasError('maxLength(200)')" class="text-red-600">
-                                        descripcion valida necesario</div>
+                                    <div *ngIf="loginForm.controls['descipcion'].hasError('maxlength')" class="text-red-600">
+                                        descripcion muy larga</div>
 
                                     <! dentro dee class invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500
                                         para los bordes rojos valid:[&:not(:placeholder-shown)]:border-green-500 para

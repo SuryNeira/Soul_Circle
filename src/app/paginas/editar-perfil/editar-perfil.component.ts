@@ -20,7 +20,6 @@ export class EditarPerfilComponent implements OnInit {
     private router: Router
   ) {
     this.loginForm = fb.group({
-      email: ["", [Validators.required, Validators.email]],
       nombre: ["", [Validators.required, Validators.maxLength(20)]],
       descipcion: ["", [Validators.required, Validators.maxLength(200)]],
       genero: ["", [Validators.required, Validators.maxLength(10)]],

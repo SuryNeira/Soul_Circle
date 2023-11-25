@@ -22,8 +22,14 @@ export class UsersService {
   deleteUser(id: number) {
     return this.http.delete(`${this.url}/${id}`);
   }
+<<<<<<< Updated upstream
   updateUser(id: number, data: any) {    
     return this.http.put(`http://localhost:4000/api/usuarios/${id}`,data);
+=======
+  updateUser(id: number,data: any) {
+    console.log(JSON.stringify(data));
+    return this.http.put(`http://localhost:4000/api/usuarios/${id}`,JSON.stringify(data))
+>>>>>>> Stashed changes
   }
   
 }

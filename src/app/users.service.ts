@@ -22,14 +22,21 @@ export class UsersService {
   deleteUser(id: number) {
     return this.http.delete(`${this.url}/${id}`);
   }
-<<<<<<< Updated upstream
-  updateUser(id: number, data: any) {    
-    return this.http.put(`http://localhost:4000/api/usuarios/${id}`,data);
-=======
   updateUser(id: number,data: any) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        // Otros encabezados según sea necesario
+      })
+    };
     console.log(JSON.stringify(data));
-    return this.http.put(`http://localhost:4000/api/usuarios/${id}`,JSON.stringify(data))
->>>>>>> Stashed changes
+    return this.http.put<any>(`http://localhost:4000/api/usuarios/${id}`,JSON.stringify(data),httpOptions).subscribe(
+      response => {
+        console.log('Respuesta del servidor:', response);
+      },
+      error => {
+        console.error('Error en la solicitud:', error);
+      });
   }
   
 }

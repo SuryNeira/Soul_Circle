@@ -29,14 +29,7 @@ export class UsersService {
         // Otros encabezados según sea necesario
       })
     };
-    console.log(JSON.stringify(data));
-    return this.http.put<any>(`http://localhost:4000/api/usuarios/${id}`,JSON.stringify(data),httpOptions).subscribe(
-      response => {
-        console.log('Respuesta del servidor:', response);
-      },
-      error => {
-        console.error('Error en la solicitud:', error);
-      });
+    return this.http.put<any>(`http://localhost:4000/api/usuarios/${id}`,JSON.stringify(data),httpOptions).subscribe();
   }
   
 }

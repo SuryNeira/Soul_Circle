@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class EditarPerfilComponent implements OnInit {
   loginForm: FormGroup;
   userProfileData: any;
+  locales: any;
 
   constructor(
     private fb: FormBuilder,
@@ -40,9 +41,13 @@ export class EditarPerfilComponent implements OnInit {
       descripcion:this.loginForm.value.descipcion,
       genero:this.loginForm.value.genero
     };
-    
+    this.userProfileData.usuario=userData.usuario;
+    this.userProfileData.contraseña=userData.contraseña;
+    this.userProfileData.descripcion=userData.descripcion;
+    this.userProfileData.genero=userData.genero;
+    console.log(this.userProfileData);
     this.user.updateUser(this.userProfileData[0].id,userData);
-    //localStorage.setItem('local', JSON.stringify(this.userProfileData));
-    //this.router.navigate(["/perfil"]);
+    localStorage.setItem('local', JSON.stringify(this.userProfileData));
+    this.router.navigate(["/perfil"]);
   }
 }

@@ -38,12 +38,11 @@ export class EditarPerfilComponent implements OnInit {
       usuario:this.loginForm.value.nombre,
       contraseña: this.loginForm.value.password,
       descripcion:this.loginForm.value.descipcion,
-      genero:this.loginForm.value.genero,
+      genero:this.loginForm.value.genero
     };
-    console.log(this.userProfileData[0].id);
-    console.log(userData);
+    
     this.user.updateUser(this.userProfileData[0].id,userData);
-
-    //localStorage.setItem('local', JSON.stringify(userData));
+    //localStorage.setItem('local', JSON.stringify(this.userProfileData));
+    //this.router.navigate(["/perfil"]);
   }
 }

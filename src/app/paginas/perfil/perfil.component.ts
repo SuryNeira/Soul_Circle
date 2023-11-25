@@ -21,12 +21,12 @@ export class PerfilComponent implements OnInit {
     private router: Router
   ) {
     this.adminForm = fb.group({
-      password: ["", [Validators.required, Validators.minLength(6)]],
+      confirmpassword: ["", [Validators.required, Validators.minLength(6)]]
     });
   }
 
   ngOnInit() {
-    this.userProfileData = this.perf.getperfil();
+    this.userProfileData = localStorage.getItem('local');
   }
 
   borrar() {

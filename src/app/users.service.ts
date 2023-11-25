@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { json } from 'express';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ export class UsersService {
 
   constructor(private http:HttpClient) { }
   url = 'http://localhost:4000/api/usuarios';
+  
   getUser(){
     return this.http.get(this.url);
   }
@@ -20,8 +22,8 @@ export class UsersService {
   deleteUser(id: number) {
     return this.http.delete(`${this.url}/${id}`);
   }
-  updateUser(id: number,data: any) {
-    console.log(data);
-    return this.http.put(`http://localhost:4000/api/usuarios/${id}`,JSON.stringify(data))
+  updateUser(id: number, data: any) {    
+    return this.http.put(`http://localhost:4000/api/usuarios/${id}`,data);
   }
+  
 }

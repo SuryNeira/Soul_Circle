@@ -6,6 +6,7 @@ interface News{
   imagen:string;
   titulo:string;
   descripcion:string;
+  comentarios?: { usuario: string; comentario: string }[];
 }
 
 @Component({
@@ -17,7 +18,7 @@ export class BuscadorComponent implements OnInit {
   buscarForm: FormGroup;
   newsList :News[] =articulos;
   coinciden :News[] =[];
-
+  
 
   constructor(private fb: FormBuilder) {
     this.buscarForm = fb.group({

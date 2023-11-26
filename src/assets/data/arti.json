@@ -1,22 +1,75 @@
 [
     {
+        "imagen":"assets/imagenes/cortarse_las_venas.jpg",
+        "titulo":"Foro1",
+        "descripcion":"foro no suicidio",
+        "comentarios": [
+            {
+                "usuario" : "pepe",
+                "comentario" :"me voy a suicidar1!!!!!!!!!!!!!!!!!!!!!!!"
+            },
+            {
+                "usuario" : "pape",
+                "comentario" :"me voy a suicidar2"
+            },
+            {
+                "usuario" : "pipe",
+                "comentario" :"me voy a suicidar3"
+            },
+            {
+                "usuario" : "pepe",
+                "comentario" :"me voy a suicidar1!!!!!!!!!!!!!!!!!!!!!!!"
+            },
+            {
+                "usuario" : "pape",
+                "comentario" :"me voy a suicidar2"
+            },
+            {
+                "usuario" : "pepe",
+                "comentario" :"me voy a suicidar1!!!!!!!!!!!!!!!!!!!!!!!"
+            },
+            {
+                "usuario" : "pape",
+                "comentario" :"me voy a suicidar2"
+            }
+        ]
+    },
+    {
         "imagen":"assets/imagenes/dia_mundial_reciclaje.jpg",
-        "titulo":"dia mundial del reciclaje",
-        "descripcion":"el 17 se mayo se celebrara el dia mundial del reciclaje"
+        "titulo":"Foro2",
+        "descripcion":"foro no suicidio 2",
+        "comentarios": [
+            {
+                "usuario" : "pepe",
+                "comentario" :"me voy a suicidar4"
+            },
+            {
+                "usuario" : "pape",
+                "comentario" :"me voy a suicidar5"
+            },
+            {
+                "usuario" : "pipe",
+                "comentario" :"me voy a suicidar6"
+            }
+        ]
     },
     {
-        "imagen":"assets/imagenes/limpiar-playas.jpg",
-        "titulo":"hombre limpia playa",
-        "descripcion":"hombrel limpia playa solo en 3 hrs"
-    },
-    {
-        "imagen":"assets/imagenes/mitos_reciclaje.jpg",
-        "titulo":"cinco mitos sobre el reciclaje que hay que desterrar",
-        "descripcion":"El conocimiento sobre el reciclaje es de gran importancia en la sociedad y evitar la información falsa es importante para contribuir al desarrollo sostenible. Para ello, Ecoembes ha publicado una serie de mitos para desterrar:"
-    },
-    {
-        "imagen":"assets/imagenes/latas_aluminio.jpg",
-        "titulo":"reciclaje: crece el mercado de latas de aluminio y permite un gran ahorro de energía",
-        "descripcion":"El proceso de fabricación de latas nuevas a partir del reciclaje es notable, ya que se trata de un metal que puede recuperarse casi en su totalidad"
+        "imagen":"assets/imagenes/dia_mundial_reciclaje.jpg",
+        "titulo":"Foro3",
+        "descripcion":"foro no suicidio 3",
+        "comentarios": [
+            {
+                "usuario" : "pepe",
+                "comentario" :"me voy a suicidar7"
+            },
+            {
+                "usuario" : "pape",
+                "comentario" :"me voy a suicidar8"
+            },
+            {
+                "usuario" : "pipe",
+                "comentario" :"me voy a suicidar9"
+            }
+        ]
     }
 ]

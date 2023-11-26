@@ -31,7 +31,7 @@ const routes: Routes = [
     component: BuscadorComponent,
   },
   {
-    path: 'tutoriales',
+    path: 'foro',
     component: TutorialesComponent,
   },
   {
@@ -51,7 +51,7 @@ const routes: Routes = [
     component: IngresoComponent,
   },
   {
-    path: 'noticias',
+    path: 'foros',
     component: NoticiasComponent,
   },
   {

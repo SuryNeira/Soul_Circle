@@ -1,29 +1,49 @@
-import { Component,OnInit } from '@angular/core';
-import articulos from '../../../assets/data/tutorial.json'
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import articulos from '../../../assets/data/arti.json';
+
 
 interface News{
+  imagen:string;
   titulo:string;
-  url:string;
   descripcion:string;
+  comentarios?: { usuario: string; comentario: string }[];
 }
+
 @Component({
-  selector: 'app-tutoriales',
-  templateUrl: './tutoriales.component.html',
-  styleUrls: ['./tutoriales.component.css']
+  selector: "app-tutoriales",
+  templateUrl: "./tutoriales.component.html",
+  styleUrls: ["./tutoriales.component.css"],
 })
-
-export class TutorialesComponent implements OnInit{
+export class TutorialesComponent implements OnInit {
   newsList :News[] =articulos;
-    constructor(){}
+  coinciden :News[] =[];
+  constructor(private route: ActivatedRoute) {}
 
-  apiLoaded = false;
-  ngOnInit() {
-    if (!this.apiLoaded) {
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      document.body.appendChild(tag);
-      this.apiLoaded = true;
-    }
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      const title = params['title'];
+      
+      // You can use 'title' here in your logic
+
+
+      let contador =0;
+      for(let i =0;i<this.newsList.length;i++)
+      {
+         if(this.newsList[i].titulo.includes(title))
+         {
+           this.coinciden[contador]=this.newsList[i];
+           contador++;
+         }
+      }
+
+
+
+
+
+
+
+
+    });
   }
 }
-

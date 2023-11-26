@@ -1,16 +1,20 @@
 <div class=" min-h-screen   flex flex-col items-center justify-center  bg-blue-300">
-<a *ngFor="let news of newsList" class=" bg-blue-500 p-8 max-w-lg border my-4  border-gray-700 rounded-2xl hover:shadow-xl hover:shadow-gray-600 flex flex-col items-center"
+<a *ngFor="let news of newsList" class=" bg-blue-500 p-8 max-w-lg border my-4  border-gray-700 rounded-2xl  flex flex-col items-center"
    >
     <img [src]="news.imagen" class="shadow rounded-lg overflow-hidden border" >
     <div class="mt-8">
         <h4 class=" text-white font-bold text-xl">{{news.titulo}}</h4>
-        <p class="mt-2 text-white ">{{news.descripcion}}
+        <p class="mt-2 text-white mb-4">{{news.descripcion}}
           
         </p>
+        
+        <a   (click)="mostrar(news.titulo)"
+              class="w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+              Acceder al foro
+        </a>
+        
 
-        <div class="mt-5 ">
-            <button type="button" routerLink="" class="inline-flex items-center rounded-md border border-transparent bg-green-700 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900">Acceder a la noticia</button>
-        </div>
+        
     </div>
 </a>
 </div>

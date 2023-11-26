@@ -26,7 +26,12 @@ export class PerfilComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userProfileData = localStorage.getItem('local');
+    
+    const userData = localStorage.getItem('local');
+    if (userData) {
+      this.userProfileData = JSON.parse(userData);
+    }
+    console.log(this.userProfileData);
   }
 
   borrar() {
@@ -38,4 +43,12 @@ export class PerfilComponent implements OnInit {
   Confirma() {
     console.log('a');
   }
+
+  
+
+
+
+
+  
+
 }

@@ -2,20 +2,20 @@
     <div class="max-w-lg mx-auto bg-blue-500 rounded-lg shadow-md p-5" >
         <img class="w-32 h-32 rounded-full mx-auto" src="assets/imagenes/perfil.jpg " alt="Profile picture" />
         <h2 class="text-center text-2xl font-semibold mt-3 text-white">
-            Nombre: {{ userProfileData.nombre }}
+            Usuario: {{ this.userProfileData[0].usuario }}
         </h2>
-        <p class="text-center text-white mt-1">
-            Correo: {{ userProfileData.mail }}
-        </p>
-
-        <div class="mt-5">
-            <h3 class="text-xl font-semibold text-white">Bio</h3>
-            <p class="text-white mt-2">
-                {{ userProfileData.nombre }} es un {{ userProfileData.descripcion }}.
+        <div *ngIf="userProfileData     " class="text-base font-semibold text-white ">
+            <p>Email:  {{ this.userProfileData[0].mail }}</p>
+            <p>Genero: {{ this.userProfileData[0].genero }}</p>
+          </div>
+        <div >
+            <h3 class="text-base font-semibold text-white ">Descripcion:</h3>
+            <p class="text-white  mb-2">
+                {{ this.userProfileData[0].descripcion }}
             </p>
         </div>
 
-        <div class="display flex">
+        <div class="display flex mb-3">
             <button type="button" (click)="borrar()"
                 class="w-full mx-3 text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                 borrar perfil

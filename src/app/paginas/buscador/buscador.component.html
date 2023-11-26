@@ -41,9 +41,12 @@
                 <div class="border rounded-md p-3 ml-3 my-3">
                     <div class="flex gap-3 items-center">
                         <h3 class="font-bold">
-                            Usuario:
+                            Usuario
                         </h3>
-                        {{ comentario.usuario }}:
+                        {{comentario.usuario}}:
+                        
+                    </div>
+                    <div>
                         {{ comentario.comentario }}
                     </div>
                 </div>
@@ -52,6 +55,9 @@
                 <textarea
                     class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
                     name="body" placeholder='Escriba su comentario' required></textarea>
+            </div>
+            <div class="w-full flex justify-end px-3">
+                <input type='submit' class="px-2.5 py-1.5 rounded-md text-white text-sm bg-green-600  hover:bg-green-700" value='Comentar'>
             </div>
         </a>
     </div>

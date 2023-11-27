@@ -21,6 +21,7 @@ export class RegistroComponent {
     this.registerForm = fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
+      edad:['', [Validators.required, Validators.minLength(6)]],
       confirmpassword: ['', [Validators.required, Validators.minLength(6)]],
       checkbox: [false,Validators.requiredTrue]  
     },
@@ -36,7 +37,8 @@ export class RegistroComponent {
       usuario:"nombre",
       descripcion:"",
       genero:"",
-      rol:"1"
+      rol:"1",
+      edad:this.registerForm.value.edad
     };
     this.user.saveUserData(userData).subscribe((result)=>{
       console.log(result);

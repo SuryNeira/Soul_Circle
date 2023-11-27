@@ -31,7 +31,7 @@ export class PerfilComponent implements OnInit {
     if (userData) {
       this.userProfileData = JSON.parse(userData);
     }
-    console.log(this.userProfileData);
+    
   }
 
   borrar() {

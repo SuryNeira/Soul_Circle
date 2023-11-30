@@ -1,74 +1,90 @@
 [
     {
-        "imagen":"assets/imagenes/cortarse_las_venas.jpg",
-        "titulo":"Foro1",
-        "descripcion":"foro no suicidio",
+        "imagen":"assets/imagenes/3.jpg",
+        "titulo":"Salud mental",
+        "descripcion":"Foro de salud mental es un lugar donde se intercambia información sobre temas relacionados con la salud emocional y se ofrece apoyo entre personas que comparten experiencias similares.",
         "comentarios": [
             {
-                "usuario" : "pepe",
-                "comentario" :"me voy a suicidar1!!!!!!!!!!!!!!!!!!!!!!!"
+                "usuario": "Diego",
+                "comentario": "La salud mental es fundamental para llevar una vida equilibrada. Es importante cuidarla tanto como la salud física."
             },
             {
-                "usuario" : "pape",
-                "comentario" :"me voy a suicidar2"
+                "usuario": "Andres",
+                "comentario": "La sociedad debería dar más importancia a la salud mental. Muchas veces se subestima su impacto en nuestra vida diaria."
             },
             {
-                "usuario" : "pipe",
-                "comentario" :"me voy a suicidar3"
+                "usuario": "Javier",
+                "comentario": "El estrés y la ansiedad son problemas comunes en la vida moderna. Es esencial buscar ayuda cuando nos sentimos abrumados."
             },
             {
-                "usuario" : "pepe",
-                "comentario" :"me voy a suicidar1!!!!!!!!!!!!!!!!!!!!!!!"
+                "usuario": "pepe",
+                "comentario": "A veces, hablar sobre nuestros problemas puede aliviar la carga mental. Es vital no guardar todo para uno mismo."
             },
             {
-                "usuario" : "pape",
-                "comentario" :"me voy a suicidar2"
+                "usuario": "pape",
+                "comentario": "El autocuidado emocional es clave para mantener una buena salud mental. Debemos aprender a priorizarnos a nosotros mismos."
             },
             {
-                "usuario" : "pepe",
-                "comentario" :"me voy a suicidar1!!!!!!!!!!!!!!!!!!!!!!!"
+                "usuario": "pepe",
+                "comentario": "Buscar apoyo en familiares o amigos puede ser de gran ayuda cuando nos enfrentamos a desafíos emocionales."
             },
             {
-                "usuario" : "pape",
-                "comentario" :"me voy a suicidar2"
+                "usuario": "pape",
+                "comentario": "Practicar la gratitud y el mindfulness puede contribuir positivamente a nuestra salud mental, ayudándonos a enfocarnos en lo positivo."
             }
         ]
     },
     {
-        "imagen":"assets/imagenes/dia_mundial_reciclaje.jpg",
-        "titulo":"Foro2",
-        "descripcion":"foro no suicidio 2",
+        "imagen":"assets/imagenes/4.jpg",
+        "titulo":"Estrés",
+        "descripcion":"El foro sobre estrés es un espacio de intercambio donde individuos comparten vivencias, métodos y consejos para lidiar con el estrés. Proporciona apoyo emocional y recursos para mejorar el bienestar mental en la vida diaria",
         "comentarios": [
             {
-                "usuario" : "pepe",
-                "comentario" :"me voy a suicidar4"
+                "usuario": "Ana",
+                "comentario": "Siento mucha presión en el trabajo últimamente."
             },
             {
-                "usuario" : "pape",
-                "comentario" :"me voy a suicidar5"
+                "usuario": "Carlos",
+                "comentario": "El estrés me está afectando el sueño."
             },
             {
-                "usuario" : "pipe",
-                "comentario" :"me voy a suicidar6"
+                "usuario": "María",
+                "comentario": "¿Alguien tiene consejos para manejar la ansiedad?"
             }
         ]
     },
     {
-        "imagen":"assets/imagenes/dia_mundial_reciclaje.jpg",
-        "titulo":"Foro3",
-        "descripcion":"foro no suicidio 3",
+        "imagen":"assets/imagenes/2.jpg",
+        "titulo":"Ansiedad",
+        "descripcion":"Un foro sobre ansiedad es un espacio en línea donde las personas comparten experiencias, consejos y recursos para lidiar con la ansiedad. Es un lugar de apoyo donde los miembros pueden discutir síntomas, estrategias de manejo y ofrecerse mutuo apoyo emocional.",
         "comentarios": [
             {
-                "usuario" : "pepe",
-                "comentario" :"me voy a suicidar7"
+                "usuario": "Diego",
+                "comentario": "La ansiedad puede afectar de manera significativa la calidad de vida. Es esencial encontrar formas saludables de manejarla."
             },
             {
-                "usuario" : "pape",
-                "comentario" :"me voy a suicidar8"
+                "usuario": "Andres",
+                "comentario": "La ansiedad puede manifestarse de diversas maneras y afectar a cualquier persona. Es importante buscar ayuda si se vuelve abrumadora."
             },
             {
-                "usuario" : "pipe",
-                "comentario" :"me voy a suicidar9"
+                "usuario": "Javier",
+                "comentario": "Aprender técnicas de respiración y relajación puede ser útil para controlar los síntomas de la ansiedad en momentos de estrés."
+            },
+            {
+                "usuario": "pepe",
+                "comentario": "La ansiedad no define quién eres. Es crucial recordar que hay formas efectivas de manejarla y superarla con apoyo adecuado."
+            },
+            {
+                "usuario": "pape",
+                "comentario": "La ansiedad puede interferir con nuestras actividades diarias, pero con el tiempo y estrategias adecuadas, podemos aprender a controlarla."
+            },
+            {
+                "usuario": "pepe",
+                "comentario": "Hablar sobre la ansiedad puede ser el primer paso para manejarla. No hay que sentir vergüenza al buscar ayuda profesional."
+            },
+            {
+                "usuario": "pape",
+                "comentario": "El autocuidado y la atención plena son herramientas poderosas para reducir los niveles de ansiedad y recuperar el equilibrio."
             }
         ]
     }

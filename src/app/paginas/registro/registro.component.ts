@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   FormBuilder,
   FormGroup,
@@ -16,9 +17,12 @@ import{HttpClientModule} from '@angular/common/http'
 
 export class RegistroComponent {
   registerForm: FormGroup;
+   
 
-  constructor(private fb: FormBuilder, private user:UsersService) {
+  constructor(private fb: FormBuilder, private user:UsersService ,private router: Router) {
+    
     this.registerForm = fb.group({
+      
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       edad:['', [Validators.required, Validators.minLength(6)]],
@@ -26,6 +30,7 @@ export class RegistroComponent {
       checkbox: [false,Validators.requiredTrue]  
     },
     {Validator: ConfirmedValidator('password', 'confirmPassword') }
+    
     )
   }
   // se puede ocupar Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")])
@@ -42,6 +47,7 @@ export class RegistroComponent {
     };
     this.user.saveUserData(userData).subscribe((result)=>{
       console.log(result);
+      this.router.navigate(["/ingreso"]);
     })
   }
 };

@@ -35,19 +35,20 @@ export class EditarPerfilComponent implements OnInit {
   Confirma() {
     this.userProfileData = localStorage.getItem('local');
     this.userProfileData=JSON.parse(this.userProfileData);
+    //console.log(this.userProfileData[0].id);   
     let userData = {
+      id:this.userProfileData[0].id,
       usuario:this.loginForm.value.nombre,
+      mail:this.userProfileData[0].mail,
       contraseña: this.loginForm.value.password,
       descripcion:this.loginForm.value.descipcion,
-      genero:this.loginForm.value.genero
+      genero:this.loginForm.value.genero,
+      rol:this.userProfileData[0].rol,
+      edad:this.userProfileData[0].edad
     };
-    this.userProfileData.usuario=userData.usuario;
-    this.userProfileData.contraseña=userData.contraseña;
-    this.userProfileData.descripcion=userData.descripcion;
-    this.userProfileData.genero=userData.genero;
-    console.log(this.userProfileData);
-    this.user.updateUser(this.userProfileData[0].id,userData);
+    this.userProfileData[0]=userData;
     localStorage.setItem('local', JSON.stringify(this.userProfileData));
+    this.user.updateUser(this.userProfileData[0].id,userData);
     this.router.navigate(["/perfil"]);
   }
 }

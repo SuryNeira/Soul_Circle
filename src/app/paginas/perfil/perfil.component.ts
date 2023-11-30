@@ -26,12 +26,10 @@ export class PerfilComponent implements OnInit {
   }
 
   ngOnInit() {
-    
     const userData = localStorage.getItem('local');
     if (userData) {
       this.userProfileData = JSON.parse(userData);
     }
-    
   }
 
   borrar() {
